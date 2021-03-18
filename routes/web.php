@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AdminLoginController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ContactUsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,9 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
-// Route::get('/contact', function () {
-//     return view('layouts.frontend.contact-us');
-// });
+// // Route::get('/contact', function () {
+// //     return view('layouts.frontend.contact-us');
+// // });
 Route::get('/contact', [ContactUsController::class, 'create'])->name('contact');
 Route::get('login', [
     'as' => 'login',
@@ -46,13 +47,11 @@ Route::namespace('App\Http\Controllers\Admin\Auth')->group(function () {
 
 
 Route::prefix('admin')->name('admin.')->group(function () {
+    Route::namespace('App\Http\Controllers\Admin')->group(function () {
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    });
     Route::get('/users', function () {
         // Route assigned name "admin.users"...
         return 'admin.users';
     })->name('users');
-    Route::get('/dashboard', function () {
-        // Route assigned name "admin.dashboard"...
-        return 'admin.dashboard';
-    })->name('dashboard');
-    
 });
