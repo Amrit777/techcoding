@@ -1,4 +1,4 @@
-@extends('layouts.backend.index')
+@extends('admin.layout.master')
 @section('content')
 <div class="page-header">
   <ol class="breadcrumb">

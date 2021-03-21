@@ -17,21 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
-// // Route::get('/contact', function () {
-// //     return view('layouts.frontend.contact-us');
-// // });
-Route::get('/contact', [ContactUsController::class, 'create'])->name('contact');
+Route::get('/', 'App\Http\Controllers\HomeController@welcome')->name('welcome');
+Route::resource('/contact',  'App\Http\Controllers\ContactUsController');
 Route::get('login', [
     'as' => 'login',
     'uses' => 'Auth\LoginController@showLoginForm'
 ])->name('login');
 
 Auth::routes();
-
-
 
 Route::get(
     '/home',
@@ -45,11 +38,16 @@ Route::namespace('App\Http\Controllers\Admin\Auth')->group(function () {
     Route::post('/dc/secure/login', 'AdminLoginController@login')->name('admin.login');
 });
 
-
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'as' => 'admin.'], function () {
     Route::namespace('App\Http\Controllers\Admin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     });
+    Route::resource('course', 'App\Http\Controllers\CourseController');
+    Route::resource('sliders', 'App\Http\Controllers\SliderController');
+    Route::resource('bootcamps', 'App\Http\Controllers\CategoryController');
+    Route::post('/media/file-delete', 'App\Http\Controllers\MediaController@delete_media')->name('delete_media');
+    Route::post('/media/save', 'App\Http\Controllers\MediaController@mediaSave')->name('media.save');
+
     Route::get('/users', function () {
         // Route assigned name "admin.users"...
         return 'admin.users';

@@ -37,7 +37,7 @@
                   <a href="#" class="dropdown-item">
                       <!-- Message Start -->
                       <div class="media">
-                          <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                          <img src="{{ asset('admin/dist/img/user1-128x128.jpg')}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                           <div class="media-body">
                               <h3 class="dropdown-item-title">
                                   Brad Diesel
@@ -53,7 +53,7 @@
                   <a href="#" class="dropdown-item">
                       <!-- Message Start -->
                       <div class="media">
-                          <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                          <img src="{{ asset('admin/dist/img/user8-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
                           <div class="media-body">
                               <h3 class="dropdown-item-title">
                                   John Pierce
@@ -69,7 +69,7 @@
                   <a href="#" class="dropdown-item">
                       <!-- Message Start -->
                       <div class="media">
-                          <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                          <img src="{{ asset('admin/dist/img/user3-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
                           <div class="media-body">
                               <h3 class="dropdown-item-title">
                                   Nora Silvester
@@ -119,13 +119,13 @@
           </li>
           <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
                   <span class="hidden-xs">Alexander Pierce</span>
               </a>
               <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                      <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
 
                       <p>
                           Alexander Pierce - Web Developer

@@ -16,6 +16,7 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->longText('description')->nullable();
             $table->foreignId('category_id')->nullable();
             $table->string('slug')->nullable();
             $table->string('overview')->nullable();
@@ -28,6 +29,9 @@ class CreateCoursesTable extends Migration
             $table->decimal('strike_out_price')->nullable();
             $table->enum('state_id', ['0', '1', '2', '3']);
             $table->foreignId('createdby_id')->nullable();
+            $table->foreignId('instructor_id')->nullable();
+            $table->foreignId('instruction_level_id')->nullable();
+            $table->text('keywords')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

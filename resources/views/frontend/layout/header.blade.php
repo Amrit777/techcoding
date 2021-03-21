@@ -17,7 +17,8 @@
                 <img class="logo1 img-fluid" src="{{ asset('frontend/images/header-logo.png') }}" alt="header-logo.png">
                 <img class="logo2 img-fluid" src="{{ asset('frontend/images/header-logo2.png') }}"
                     alt="header-logo2.png">
-                <span>edumy</span>
+                <span>Dotcrypt Technologies Pvt Ltd</span>
+                 
             </a>
             <!-- Responsive Menu Structure-->
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
@@ -45,19 +46,21 @@
                                 <li><a href="page-course-single-v3.html">Single V3</a></li>
                             </ul>
                         </li> --}}
-                        <li><a href="page-instructors.html">Instructors</a></li>
-                        <li><a href="page-instructors.html">Instructors</a></li>
-                        <li><a href="page-instructors-single.html">Instructor Single</a></li>
+                        @if (!empty($bootcamps))
+                            @foreach ($bootcamps as $bootcamp)
+                                <li><a href="#{{ $bootcamp->name }}">{{ $bootcamp->name }}</a></li>
+                            @endforeach
+                        @endif
                     </ul>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="#"><span class="title">Events</span></a>
                 </li>
                 <li>
                     <a href="#"><span class="title">Blog</span></a>
-                </li>
+                </li> --}}
                 <li class="last">
-                    <a href="{{ route('contact') }}"><span class="title">Contact</span></a>
+                    <a href="{{ route('contact.index') }}"><span class="title">Contact</span></a>
                 </li>
             </ul>
             <ul class="sign_up_btn pull-right dn-smd mt20">
@@ -74,8 +77,9 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                     document.getElementById('logout-form').submit();">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                                                 document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 
@@ -104,7 +108,7 @@
             <div class="main_logo_home2">
                 <img class="nav_logo_img img-fluid float-left mt20" src="{{ asset('frontend/images/header-logo.png') }}"
                     alt="header-logo.png">
-                <span>edumy</span>
+                <span>Dotcrypt Technologies Pvt Ltd</span>
             </div>
             <ul class="menu_bar_home2">
                 <li class="list-inline-item">
@@ -214,7 +218,7 @@
                 <li><a href="page-blog-single.html">Single Post</a></li>
             </ul>
             </li> --}}
-            <li><a href="{{ route('contact') }}">Contact</a></li>
+            <li><a href="{{ route('contact.index') }}">Contact</a></li>
             <li><a href="{{ route('login') }}"><span class="flaticon-user"></span> Login</a></li>
         </ul>
     </nav>

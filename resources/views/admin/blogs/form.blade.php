@@ -1,4 +1,4 @@
-@extends('layouts.backend.index')
+@extends('admin.layout.master')
 @section('content')
 <style type="text/css">
 

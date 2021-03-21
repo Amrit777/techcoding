@@ -311,7 +311,7 @@
                                                     <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                                 </div>
                                                 <!-- /.direct-chat-infos -->
-                                                <img class="direct-chat-img" src="dist/img/user1-128x128.jpg"
+                                                <img class="direct-chat-img" src="{{ asset('admin/dist/img/user1-128x128.jpg')}}"
                                                     alt="message user image">
                                                 <!-- /.direct-chat-img -->
                                                 <div class="direct-chat-text">
@@ -328,7 +328,7 @@
                                                     <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                                 </div>
                                                 <!-- /.direct-chat-infos -->
-                                                <img class="direct-chat-img" src="dist/img/user3-128x128.jpg"
+                                                <img class="direct-chat-img" src="{{ asset('admin/dist/img/user3-128x128.jpg')}}"
                                                     alt="message user image">
                                                 <!-- /.direct-chat-img -->
                                                 <div class="direct-chat-text">
@@ -345,7 +345,7 @@
                                                     <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                                                 </div>
                                                 <!-- /.direct-chat-infos -->
-                                                <img class="direct-chat-img" src="dist/img/user1-128x128.jpg"
+                                                <img class="direct-chat-img" src="{{ asset('admin/dist/img/user1-128x128.jpg')}}"
                                                     alt="message user image">
                                                 <!-- /.direct-chat-img -->
                                                 <div class="direct-chat-text">
@@ -362,7 +362,7 @@
                                                     <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                                                 </div>
                                                 <!-- /.direct-chat-infos -->
-                                                <img class="direct-chat-img" src="dist/img/user3-128x128.jpg"
+                                                <img class="direct-chat-img" src="{{ asset('admin/dist/img/user3-128x128.jpg')}}"
                                                     alt="message user image">
                                                 <!-- /.direct-chat-img -->
                                                 <div class="direct-chat-text">
@@ -380,7 +380,7 @@
                                             <ul class="contacts-list">
                                                 <li>
                                                     <a href="#">
-                                                        <img class="contacts-list-img" src="dist/img/user1-128x128.jpg"
+                                                        <img class="contacts-list-img" src="{{ asset('admin/dist/img/user1-128x128.jpg')}}"
                                                             alt="User Avatar">
 
                                                         <div class="contacts-list-info">
@@ -416,7 +416,7 @@
                                                 <!-- End Contact Item -->
                                                 <li>
                                                     <a href="#">
-                                                        <img class="contacts-list-img" src="dist/img/user3-128x128.jpg"
+                                                        <img class="contacts-list-img" src="{{ asset('admin/dist/img/user3-128x128.jpg')}}"
                                                             alt="User Avatar">
 
                                                         <div class="contacts-list-info">
@@ -468,7 +468,7 @@
                                                 <!-- End Contact Item -->
                                                 <li>
                                                     <a href="#">
-                                                        <img class="contacts-list-img" src="dist/img/user8-128x128.jpg"
+                                                        <img class="contacts-list-img" src="{{ asset('admin/dist/img/user8-128x128.jpg')}}"
                                                             alt="User Avatar">
 
                                                         <div class="contacts-list-info">
@@ -526,12 +526,12 @@
                                     <div class="card-body p-0">
                                         <ul class="users-list clearfix">
                                             <li>
-                                                <img src="dist/img/user1-128x128.jpg" alt="User Image">
+                                                <img src="{{ asset('admin/dist/img/user1-128x128.jpg')}}" alt="User Image">
                                                 <a class="users-list-name" href="#">Alexander Pierce</a>
                                                 <span class="users-list-date">Today</span>
                                             </li>
                                             <li>
-                                                <img src="dist/img/user8-128x128.jpg" alt="User Image">
+                                                <img src="{{ asset('admin/dist/img/user8-128x128.jpg')}}" alt="User Image">
                                                 <a class="users-list-name" href="#">Norman</a>
                                                 <span class="users-list-date">Yesterday</span>
                                             </li>
@@ -546,7 +546,7 @@
                                                 <span class="users-list-date">12 Jan</span>
                                             </li>
                                             <li>
-                                                <img src="dist/img/user2-160x160.jpg" alt="User Image">
+                                                <img src="{{ asset('admin/dist/img/user2-160x160.jpg') }}" alt="User Image">
                                                 <a class="users-list-name" href="#">Alexander</a>
                                                 <span class="users-list-date">13 Jan</span>
                                             </li>
@@ -561,7 +561,7 @@
                                                 <span class="users-list-date">15 Jan</span>
                                             </li>
                                             <li>
-                                                <img src="dist/img/user3-128x128.jpg" alt="User Image">
+                                                <img src="{{ asset('admin/dist/img/user3-128x128.jpg')}}" alt="User Image">
                                                 <a class="users-list-name" href="#">Nadia</a>
                                                 <span class="users-list-date">15 Jan</span>
                                             </li>

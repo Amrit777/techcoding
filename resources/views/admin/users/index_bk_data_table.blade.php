@@ -1,4 +1,4 @@
-@extends('layouts.backend.index')
+@extends('admin.layout.master')
 @section('content')
 <div class="page-header">
       <h1 class="page-title">Users Management</h1>

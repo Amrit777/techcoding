@@ -1,12 +1,43 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Media;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
-class DashboardController extends Controller
+class MediaController extends Controller
 {
+    public function delete_media(Request $request)
+    {
+
+        $media = Media::findOrFail($request->key);
+        $media->delete();
+        return response()->json(['message' => "Successfully deleted"], 200);
+    }
+
+    public function mediaSave(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'id' => 'required',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['message' => $validator->errors()[0]], 400);
+        }
+        $media = Media::where('id', $request->id)->first();
+        $media->alt = $request->alt;
+        $media->size = $request->keyword;
+        $media->save();
+        return response()->json(
+            [
+                'message' => true,
+                'id' => $media->id,
+                'key' => $media->size,
+                'alt' => $media->alt
+            ],
+            200
+        );
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +45,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard.v1');
+        //
     }
 
     /**

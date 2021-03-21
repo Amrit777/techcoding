@@ -5,53 +5,28 @@
             <div class="col-lg-12">
                 <div class="main-banner-wrapper">
                     <div class="banner-style-one owl-theme owl-carousel">
-                        <div class="slide slide-one"
-                            style="background-image: url({{ asset('frontend/images/home/0.jpg') }}); height: 95vh;">
-                            <div class="container">
-                                <div class="row home-content">
-                                    <div class="col-lg-12 text-center p0">
-                                        <h3 class="banner-title">Self EducatIon Resources and Infos</h3>
-                                        {{-- <p>Technology is brining a massive wave of evolution on learning things on
-                                            different ways.</p>
-                                        <div class="btn-block"><a href="#" class="banner-btn">Ready to get Started?</a>
-                                        </div> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-one"
-                            style="background-image: url({{ asset('frontend/images/home/02.jpg') }}); height: 95vh;">
-                            <div class="container">
-                                <div class="row home-content">
-                                    <div class="col-lg-12 text-center p0">
-                                        <h3 class="banner-title">Self EducatIon Resources and Infos</h3>
-                                        <p>Technology is brining a massive wave of evolution on learning things on
-                                            different ways</p>
-                                        <div class="btn-block"><a href="#" class="banner-btn">Ready to get Started?</a>
+                        @if ($sliders)
+                            @foreach ($sliders as $slider)
+                                <div class="slide slide-one"
+                                    style="background-image: url({{ asset($slider->media->getUrl()) }}); height: 95vh;">
+                                    <div class="container">
+                                        <div class="row home-content">
+                                            <div class="col-lg-12 text-center p0">
+                                                <h3 class="banner-title">{{ $slider->title }}</h3>
+                                                <p>{{ $slider->description }}</p>
+                                                <div class="btn-block"><a href="{{ $slider->link_to }}"
+                                                        class="banner-btn">{{ $slider->link_title }}</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-one"
-                            style="background-image: url({{ asset('frontend/images/home/03.jpg') }}); height: 95vh;">
-                            <div class="container">
-                                <div class="row home-content">
-                                    <div class="col-lg-12 text-center p0">
-                                        <h3 class="banner-title">Find the Best Courses</h3>
-                                        <p>Technology is brining a massive wave of evolution on learning things on
-                                            different ways</p>
-                                        <div class="btn-block"><a href="#" class="banner-btn">Ready to get Started?</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
+                        @endif
                     </div>
                     <div class="carousel-btn-block banner-carousel-btn">
                         <span class="carousel-btn left-btn"><i class="flaticon-left-arrow left"></i> </span>
-                        <span class="carousel-btn right-btn"><i
-                                class="flaticon-right-arrow-1 right"></i></span>
+                        <span class="carousel-btn right-btn"><i class="flaticon-right-arrow-1 right"></i></span>
                     </div><!-- /.carousel-btn-block banner-carousel-btn -->
                 </div><!-- /.main-banner-wrapper -->
             </div>

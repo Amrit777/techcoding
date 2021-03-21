@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ContactUsController extends Controller
 {
@@ -23,7 +25,7 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        //
+        return view('frontend.contact-us');
     }
 
     /**
@@ -44,7 +46,34 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'subject' => 'required',
+            'message' => 'required'
+        ]);
+        $response  = 'error';
+        $msg = 'Something went wrong';
+
+        try {
+            DB::beginTransaction();
+            $model = ContactUs::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'subject' =>  $request->subject,
+                'message' =>  $request->message
+            ]);
+            // print_r($model);
+            // exit;
+
+            $response = 'success';
+            $msg = 'Thanks !!! Admin will shortly contact you.';
+            DB::commit();
+        } catch (\Exception $exception) {
+            DB::rollBack();
+            $msg = $exception->getMessage();
+        }
+        return redirect()->back()->with($response, $msg);
     }
 
     /**
@@ -55,7 +84,7 @@ class ContactUsController extends Controller
      */
     public function show($id)
     {
-        //
+        die("show");
     }
 
     /**

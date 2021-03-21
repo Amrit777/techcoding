@@ -22,6 +22,7 @@ class CreateSlidersTable extends Migration
             $table->string('image')->nullable();
             $table->foreignId('createdby_id')->nullable();
             $table->enum('state_id', ['0', '1', '2']);
+            $table->string('slug')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

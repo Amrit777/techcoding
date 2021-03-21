@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Media;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,4 +21,14 @@ class Category extends Model
         'updated_at',
         'created_by_id'
     ];
+
+    public function media()
+    {
+        return $this->morphOne(Media::class, 'model');
+    }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class)->with('media');
+    }
 }
