@@ -135,7 +135,7 @@ class CourseController extends Controller
         $model->instruction_level_id = $request->get('instruction_level_id');
 
         if (!empty($request->file())) {
-            Media::updateImage($request->file()['image'], $model);
+            Media::updateImage($request->file()['image'], $model, 'course-images');
         }
         $model->save();
         return redirect()->route('admin.course.index')->with('success', 'Course updated!');

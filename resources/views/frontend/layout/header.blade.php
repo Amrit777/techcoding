@@ -24,9 +24,14 @@
             <!-- Responsive Menu Structure-->
             <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
             <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
-
                 <li>
-                    <a href="#"><span class="title">Courses</span></a>
+                    <a href="{{ route('welcome') }}"><span class="title">HOME</span></a>
+                </li>
+                <li>
+                    <a href="{{ route('aboutus') }}"><span class="title">About US</span></a>
+                </li>
+                <li>
+                    <a href="{{ route('welcome') }}"><span class="title">Courses</span></a>
                     <!-- Level Two-->
                     <ul>
                         {{-- <li>
@@ -48,7 +53,7 @@
                             </ul>
                         </li> --}}
                         @php
-                        $bootcamps = App\Models\Category::all();
+                            $bootcamps = App\Models\Category::all();
                         @endphp
                         @if (!empty($bootcamps))
                             @foreach ($bootcamps as $bootcamp)
@@ -83,7 +88,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                         document.getElementById('logout-form').submit();">
+                                                                                                 document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

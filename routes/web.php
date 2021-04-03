@@ -19,10 +19,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\HomeController@welcome')->name('welcome');
 Route::resource('/contact',  'App\Http\Controllers\ContactUsController');
-Route::get('login', [
-    'as' => 'login',
-    'uses' => 'Auth\LoginController@showLoginForm'
-])->name('login');
+Route::get('/about',  'App\Http\Controllers\HomeController@aboutUs')->name('aboutus');
+
+// Route::get('login', [
+//     'as' => 'login',
+//     'uses' => 'Auth\LoginController@showLoginForm'
+// ])->name('login');
 
 Auth::routes();
 

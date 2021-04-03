@@ -71,7 +71,7 @@ class SliderController extends Controller
                 'slug' => Str::slug($request->title)
             ]);
             Media::saveImage($request->file()['image'], $slider, 'sliders-images');
-            
+
             $response = 'success';
             $msg = 'Slider saved';
             DB::commit();
@@ -129,7 +129,7 @@ class SliderController extends Controller
         $model->link_title = $request->get('link_title');
 
         if (!empty($request->file())) {
-            Media::updateImage($request->file()['image'], $model);
+            Media::updateImage($request->file()['image'], $model, 'sliders-images');
         }
         $model->save();
         return redirect()->route('admin.sliders.index')->with('success', 'Slider updated!');

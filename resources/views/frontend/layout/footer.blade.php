@@ -17,11 +17,10 @@
                 <div class="footer_company_widget">
                     <h4>COMPANY</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#">About Us</a></li>
-                        {{-- <li><a href="#">Blog</a></li>
-                        --}}
-                        <li><a href="page-contact.html">Contact</a></li>
-                        <li><a href="#">Become a Teacher</a></li>
+                        <li><a href="{{route('aboutus')}}">About Us</a></li>
+                        {{-- <li><a href="#">Blog</a></li> --}}
+                        <li><a href="{{route('contact.index')}}">Contact</a></li>
+                        {{-- <li><a href="#">Become a Teacher</a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -30,7 +29,7 @@
                     <h4>PROGRAMS</h4>
                     <ul class="list-unstyled">
                         @php
-                        $bootcamps = App\Models\Category::all();
+                            $bootcamps = App\Models\Category::all();
                         @endphp
                         @if (count($bootcamps))
                             @foreach ($bootcamps as $bootcamp)
@@ -53,8 +52,7 @@
                         {{-- <li class="list-inline-item"><a href="#"><i
                                     class="fa fa-pinterest"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-google"></i></a></li>
-                        --}}
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-google"></i></a></li> --}}
                     </ul>
                 </div>
             </div>
@@ -68,8 +66,8 @@
                         <li><a href="#">Release Status</a></li>
                     </ul>
                 </div> --}}
-            </div>
-            {{-- <div class="col-sm-6 col-md-6 col-md-3 col-lg-3">
+        </div>
+        {{-- <div class="col-sm-6 col-md-6 col-md-3 col-lg-3">
                 <div class="footer_apps_widget">
                     <h4>MOBILE</h4>
                     <div class="app_grid">
@@ -90,7 +88,7 @@
                     </div>
                 </div>
             </div> --}}
-        </div>
+    </div>
     </div>
 </section>
 

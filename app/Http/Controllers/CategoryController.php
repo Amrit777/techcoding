@@ -61,22 +61,22 @@ class CategoryController extends Controller
         $msg = 'Something went wrong';
 
         // try {
-            // DB::beginTransaction();
-            $model = Category::create([
-                'name' => $request->name,
-                'description' => $request->description,
-                'icon_class' => $request->icon_class,
-                'createdby_id' => Auth::user()->id,
-                'state_id' => '1',
-                'slug' => Str::slug($request->name),
-                'link_to' => $request->link_to,
-                'link_title' => $request->link_title,
-            ]);
-            Media::saveImage($request->file()['image'], $model, 'category-images');
+        // DB::beginTransaction();
+        $model = Category::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_class' => $request->icon_class,
+            'createdby_id' => Auth::user()->id,
+            'state_id' => '1',
+            'slug' => Str::slug($request->name),
+            'link_to' => $request->link_to,
+            'link_title' => $request->link_title,
+        ]);
+        Media::saveImage($request->file()['image'], $model, 'category-images');
 
-            $response = 'success';
-            $msg = 'Bootcamp saved';
-            // DB::commit();
+        $response = 'success';
+        $msg = 'Bootcamp saved';
+        // DB::commit();
         // } catch (\Exception $exception) {
         //     DB::rollBack();
         //     $msg = $exception->getMessage();
@@ -118,7 +118,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-       
+
         $request->validate([
             'name' => 'required',
             'description' => 'required'
@@ -131,7 +131,7 @@ class CategoryController extends Controller
         $model->link_title = $request->get('link_title');
 
         if (!empty($request->file())) {
-            Media::updateImage($request->file()['image'], $model);
+            Media::updateImage($request->file()['image'], $model, 'category-images');
         }
         $model->save();
         // print_r($model);

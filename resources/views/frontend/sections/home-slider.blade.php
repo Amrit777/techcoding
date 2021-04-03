@@ -14,9 +14,9 @@
                                             <div class="col-lg-12 text-center p0">
                                                 <h3 class="banner-title">{{ $slider->title }}</h3>
                                                 <p>{{ $slider->description }}</p>
-                                                <div class="btn-block"><a href="{{ $slider->link_to }}"
+                                                {{-- <div class="btn-block"><a href="{{ $slider->link_to }}"
                                                         class="banner-btn">{{ $slider->link_title }}</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                         </div>
                                     </div>

@@ -36,7 +36,7 @@ class Media extends Model
 
 
 
-    public static function updateImage($image, $user)
+    public static function updateImage($image, $user, $folder = '/')
     {
         $media = self::where("model_id", $user->id)->where("model_type", get_class($user))->first();
         if (!empty($media)) {
@@ -47,7 +47,7 @@ class Media extends Model
 
             $media->delete();
         }
-        self::saveImage($image, $user);
+        self::saveImage($image, $user, $folder);
     }
 
 
