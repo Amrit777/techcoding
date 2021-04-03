@@ -33,8 +33,8 @@ class HomeController extends Controller
     public function welcome()
     {
         $sliders = Slider::all();
-        $bootcamps = Category::all();
-        $courses = Course::all();
+        // $bootcamps = Category::all();
+        // $courses = Course::all();
         // return View::composer(['welcome', 'frontend.layout.footer'], function ($view) {
         //     $view->with(
         //         'bootcamps', $bootcamps,
@@ -43,6 +43,6 @@ class HomeController extends Controller
         //     ); // bind data to view
         // });
 
-        return view('welcome', compact('sliders', 'bootcamps', 'courses'));
+        return view('welcome', compact('sliders'));
     }
 }

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Course;
+use App\Models\Slider;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -17,6 +20,15 @@ class Controller extends BaseController
     const FAILED = 400;
     const ERROR = 500;
 
+    public function __construct()
+    {
+        $this->sliders = Slider::all();
+        $this->bootcamps = Category::all();
+        $this->courses = Course::all();
+        // $this->middleware('auth');
+        // $this->middleware('log')->only('index');
+        // $this->middleware('subscribed')->except('store');
+    }
     public function error($msg)
     {
         $response['status'] = false;
@@ -89,6 +101,18 @@ class Controller extends BaseController
     }
 
     protected function getRelatedSlugs($class, $slug, $id = 0, $col = null)
+    {
+        if (!empty($col)) {
+            return $class::select($col)->where($col, 'like', $slug . '%')
+                ->where('id', '<>', $id)
+                ->get();
+        }
+        return $class::select('slug')->where('slug', 'like', $slug . '%')
+            ->where('id', '<>', $id)
+            ->get();
+    }
+
+    public function frontendAdditionalDetails($class, $slug, $id = 0, $col = null)
     {
         if (!empty($col)) {
             return $class::select($col)->where($col, 'like', $slug . '%')

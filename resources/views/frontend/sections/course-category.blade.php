@@ -21,6 +21,9 @@
             </div>
         </div>
         <div class="row">
+            @php
+                $bootcamps = App\Models\Category::all();
+            @endphp
             @if (count($bootcamps))
                 @foreach ($bootcamps as $bootcamp)
                     <div class="col-sm-6 col-lg-4 ">
@@ -49,8 +52,7 @@
 @if (count($bootcamps))
     @foreach ($bootcamps as $key => $bootcamp)
         <!-- Divider -->
-        <section id="{{ $bootcamp->name }}" class="divider_home1 parallax"
-            data-stellar-background-ratio="0.3"
+        <section id="{{ $bootcamp->name }}" class="divider_home1 parallax" data-stellar-background-ratio="0.3"
             style="background-image:  url({{ asset($bootcamp->media->getUrl()) }});">
             <div class="container">
                 <div class="row">
@@ -105,19 +107,16 @@
                                         <div class="col-md-6 col-lg-4 col-xl-4">
                                             <div class="top_courses">
                                                 <div class="thumb">
-                                                    {{-- @if (count($course->media))
-                                                        --}}
-                                                        <img class="img-whp" src="{{ asset($course->media->getUrl()) }}"
-                                                            alt="t1.jpg">
-                                                        {{-- @endif
-                                                    --}}
+                                                    {{-- @if (count($course->media)) --}}
+                                                    <img class="img-whp" src="{{ asset($course->media->getUrl()) }}"
+                                                        alt="t1.jpg">
+                                                    {{-- @endif --}}
                                                     <div class="overlay">
                                                         {{-- <div class="tag">Best Seller
                                                         </div> --}}
                                                         @auth
                                                             {{-- <div class="icon"><span
-                                                                    class="flaticon-like"></span></div>
-                                                            --}}
+                                                                    class="flaticon-like"></span></div> --}}
                                                         @endauth
                                                         {{-- <a class="tc_preview_course"
                                                             href="#"></a> --}}

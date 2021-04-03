@@ -46,9 +46,10 @@
                 <div class="footer_social_widget mt15">
                     <ul>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+
                         {{-- <li class="list-inline-item"><a href="#"><i
                                     class="fa fa-twitter"></i></a></li> --}}
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
                         {{-- <li class="list-inline-item"><a href="#"><i
                                     class="fa fa-pinterest"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
@@ -110,7 +111,7 @@
                         <li class="list-inline-item"><a href="#our-courses">Courses</a></li>
                         {{-- <li class="list-inline-item"><a href="#">Terms</a></li>
                         <li class="list-inline-item"><a href="#">Sitemap</a></li>
-                        <li class="list-inline-item"><a href="#">Purchase</a></li> 
+                        <li class="list-inline-item"><a href="#">Purchase</a></li>
                     </ul>
                 </div>
             </div>
@@ -136,7 +137,7 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="copyright-widget text-center">
-                    <p>Copyright Dotcrypt Technologies Pvt Ltd © 2021. All Rights Reserved.</p>
+                    <p>@copyright. Dotcrypt Technologies Pvt Ltd © 2021. All Rights Reserved.</p>
                 </div>
             </div>
         </div>

@@ -4,19 +4,20 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="main-title text-center">
-                    <h3 class="mt0">Our Accrediations</h3>
-                    <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    <h3 class="mt0">Our Accreditations</h3>
+                    <p>Accreditation by STEM.org, USA </p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-xl-6">
+            <div class="col-lg-12 col-xl-12">
                 <div class="blog_slider_home1">
                     <div class="item">
                         <div class="blog_post one">
                             <div class="thumb">
                                 <div class="post_title">Events</div>
-                                <img class="img-fluid w100" src="{{ asset('frontend/images/blog/1.jpg') }}" alt="1.jpg">
+                                <img class="img-fluid w100" src="{{ asset('frontend/images/blog/1.jpg') }}"
+                                    alt="1.jpg">
                                 <a class="post_date" href="#"><span>28 <br> March</span></a>
                             </div>
                             <div class="details">
@@ -76,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3 col-xl-3">
+            {{-- <div class="col-md-6 col-lg-3 col-xl-3">
                 <div class="blog_post">
                     <div class="thumb">
                         <img class="img-fluid w100" src="{{ asset('frontend/images/blog/2.jpg') }}" alt="2.jpg">
@@ -99,15 +100,15 @@
                         <h4>An Overworked Newspaper Editor</h4>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
-        <div class="row mt50">
+        {{-- <div class="row mt50">
             <div class="col-lg-12">
                 <div class="read_more_home text-center">
                     <h4>Like what you see? <a href="#">See more posts<span class="flaticon-right-arrow pl10"></span></a>
                     </h4>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </section>

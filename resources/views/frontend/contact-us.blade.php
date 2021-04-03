@@ -26,22 +26,21 @@
                     <div class="contact_localtion text-center">
                         <div class="icon"><span class="flaticon-placeholder-1"></span></div>
                         <h4>Our Location</h4>
-                        <p>Collin Street West, Victor 8007, Australia.</p>
+                        <p>Rishav plaza, 1-B, Rehabari, Guwahati, Assam, India</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="contact_localtion text-center">
                         <div class="icon"><span class="flaticon-phone-call"></span></div>
                         <h4>Our Location</h4>
-                        <p class="mb0">Mobile: (+096) 468 235 <br> Fax: (+096) 468 235</p>
+                        <p class="mb0">Mobile: (+91) 912 706 0701 </p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="contact_localtion text-center">
                         <div class="icon"><span class="flaticon-email"></span></div>
                         <h4>Write Some Words</h4>
-                        <p><a href="https://grandetest.com/cdn-cgi/l/email-protection"
-                                class="__cf_email__">[email&#160;protected]</a></p>
+                        <p>admin@dotcrypt.co.in</p>
                     </div>
                 </div>
             </div>
@@ -51,7 +50,7 @@
                 </div>
                 <div class="col-lg-6 form_grid">
                     <h4 class="mb5">Send a Message</h4>
-                    <p>Ex quem dicta delicata usu, zril vocibus maiestatis in qui.</p>
+                    <p>For any inquiries, queries and feedbacks.</p>
                     <form class="contact_form" id="contact_form" name="contact_form" action="{{ route('contact.store') }}"
                         method="post" novalidate="novalidate">
                         @csrf
