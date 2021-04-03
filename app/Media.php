@@ -34,8 +34,6 @@ class Media extends Model
         return $model;
     }
 
-
-
     public static function updateImage($image, $user, $folder = '/')
     {
         $media = self::where("model_id", $user->id)->where("model_type", get_class($user))->first();
