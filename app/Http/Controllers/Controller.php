@@ -20,15 +20,6 @@ class Controller extends BaseController
     const FAILED = 400;
     const ERROR = 500;
 
-    public function __construct()
-    {
-        $this->sliders = Slider::all();
-        $this->bootcamps = Category::all();
-        $this->courses = Course::all();
-        // $this->middleware('auth');
-        // $this->middleware('log')->only('index');
-        // $this->middleware('subscribed')->except('store');
-    }
     public function error($msg)
     {
         $response['status'] = false;
