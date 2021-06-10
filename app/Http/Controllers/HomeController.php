@@ -50,4 +50,37 @@ class HomeController extends Controller
     {
         return view('frontend.aboutus');
     }
+
+    public function atl()
+    {
+        return view('frontend.labs.atl');
+    }
+    public function stem()
+    {
+        return view('frontend.labs.stem');
+    }
+    public function robotics()
+    {
+        return view('frontend.labs.robotics');
+    }
+    public function coding()
+    {
+        return view('frontend.labs.coding');
+    }
+    public function maths()
+    {
+        return view('frontend.labs.maths');
+    }
+    public function language()
+    {
+        return view('frontend.labs.language');
+    }
+    public function science()
+    {
+        return view('frontend.labs.science');
+    }
+    public function evs()
+    {
+        return view('frontend.labs.evs');
+    }
 }

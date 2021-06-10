@@ -20,6 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\HomeController@welcome')->name('welcome');
 Route::resource('/contact',  'App\Http\Controllers\ContactUsController');
 Route::get('/about',  'App\Http\Controllers\HomeController@aboutUs')->name('aboutus');
+Route::get('/atal-tinkering-labs',  'App\Http\Controllers\HomeController@atl')->name('atl');
+Route::get('/stem-lab',  'App\Http\Controllers\HomeController@stem')->name('stem-lab');
+Route::get('/robotics-lab',  'App\Http\Controllers\HomeController@robotics')->name('robotics-lab');
+Route::get('/coding-lab',  'App\Http\Controllers\HomeController@coding')->name('coding-lab');
+Route::get('/maths-lab',  'App\Http\Controllers\HomeController@maths')->name('maths-lab');
+Route::get('/language-lab',  'App\Http\Controllers\HomeController@language')->name('language-lab');
+Route::get('/science-lab',  'App\Http\Controllers\HomeController@science')->name('science-lab');
+Route::get('/evs-lab',  'App\Http\Controllers\HomeController@evs')->name('evs-lab');
 
 // Route::get('login', [
 //     'as' => 'login',
@@ -44,6 +52,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'as' => 'admin.'], fu
     Route::namespace('App\Http\Controllers\Admin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     });
+    Route::resource('brand', 'App\Http\Controllers\BrandController');
     Route::resource('course', 'App\Http\Controllers\CourseController');
     Route::resource('sliders', 'App\Http\Controllers\SliderController');
     Route::resource('bootcamps', 'App\Http\Controllers\CategoryController');

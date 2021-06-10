@@ -16,7 +16,8 @@
                         <div class="blog_post one">
                             <div class="thumb">
                                 <div class="post_title">Events</div>
-                                <img class="img-fluid w100" src="{{ asset('stem-certificate.png') }}"
+                                <img class="img-fluid w100"
+                                    src="{{ asset('frontend/images/stem/stem-certificate.png') }}"
                                     alt="stem-certificate.png">
                                 {{-- <a class="post_date" href="#"><span>28 <br> March</span></a> --}}
                             </div>
@@ -37,7 +38,8 @@
                         <div class="blog_post one">
                             <div class="thumb">
                                 <div class="post_title">Events</div>
-                                <img class="img-fluid w100" src="{{ asset('stem.png') }}" alt="1a.jpg">
+                                <img class="img-fluid w100" src="{{ asset('frontend/images/stem/stem.png') }}"
+                                    alt="1a.jpg">
                                 {{-- <a class="post_date" href="#"><span>28 <br> March</span></a> --}}
                             </div>
                             <div class="details">
@@ -57,7 +59,8 @@
                         <div class="blog_post one">
                             <div class="thumb">
                                 <div class="post_title">Events</div>
-                                <img class="img-fluid w100" src="{{ asset('stem-edu.png') }}" alt="1b.jpg">
+                                <img class="img-fluid w100" src="{{ asset('frontend/images/stem/stem-edu.png') }}"
+                                    alt="1b.jpg">
                                 {{-- <a class="post_date" href="#"><span>28 <br> March</span></a> --}}
                             </div>
                             <div class="details">
@@ -75,33 +78,5 @@
                     </div>
                 </div>
             </div>
-            {{-- @php
-                $bootcamps = App\Models\Category::all();
-            @endphp
-            @if (count($bootcamps))
-                @foreach ($bootcamps as $bootcamp) --}}
-                    {{-- <div class="col-md-6 col-lg-3 col-xl-3">
-                        <div class="blog_post">
-                            <div class="thumb">
-                                <img class="img-fluid w100" src="{{ asset('stem-edu.png') }}" alt="2.jpg"> --}}
-                                {{-- <a class="post_date" href="#">July 21, 2019</a> --}}
-                            {{-- </div>
-                            <div class="details">
-                                <h5>{{ $bootcamp->name }}</h5>
-                                <h4>{{ $bootcamp->description }}</h4>
-                            </div>
-                        </div>
-                    </div> --}}
-                {{-- @endforeach
-            @endif --}}
         </div>
-        {{-- <div class="row mt50">
-            <div class="col-lg-12">
-                <div class="read_more_home text-center">
-                    <h4>Like what you see? <a href="#">See more posts<span class="flaticon-right-arrow pl10"></span></a>
-                    </h4>
-                </div>
-            </div>
-        </div> --}}
-    </div>
 </section>

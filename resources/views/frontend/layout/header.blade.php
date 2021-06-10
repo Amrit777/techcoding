@@ -14,11 +14,11 @@
                 </button>
             </div>
             <a href="{{ route('welcome') }}" class="navbar_brand float-left dn-smd">
-                <img class="logo1 img-fluid" src="{{ asset('frontend/images/header-logo.png') }}"
+                {{-- <img class="logo1 img-fluid" src="{{ asset('frontend/images/header-logo.png') }}"
                     alt="header-logo.png">
                 <img class="logo2 img-fluid" src="{{ asset('frontend/images/header-logo2.png') }}"
-                    alt="header-logo2.png">
-                <span>Dotcrypt Technologies Pvt Ltd</span>
+                    alt="header-logo2.png"> --}}
+                <span>Dotcrypt Technologies</span>
 
             </a>
             <!-- Responsive Menu Structure-->
@@ -31,27 +31,24 @@
                     <a href="{{ route('aboutus') }}"><span class="title">About US</span></a>
                 </li>
                 <li>
-                    <a href="{{ route('welcome') }}"><span class="title">Courses</span></a>
+                    <a href="{{ route('atl') }}"><span class="title">ATL</span></a>
+                </li>
+                <li>
+                    <a href="{{ route('welcome') }}"><span class="title">Dotcrypt Labs</span></a>
                     <!-- Level Two-->
                     <ul>
-                        {{-- <li>
-                            <a href="#">Courses List</a>
-                            <!-- Level Three-->
-                            <ul>
-                                <li><a href="page-course-v1.html">Courses v1</a></li>
-                                <li><a href="page-course-v2.html">Courses v2</a></li>
-                                <li><a href="page-course-v3.html">Courses v3</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Courses Single</a>
-                            <!-- Level Three-->
-                            <ul>
-                                <li><a href="page-course-single-v1.html">Single V1</a></li>
-                                <li><a href="page-course-single-v2.html">Single V2</a></li>
-                                <li><a href="page-course-single-v3.html">Single V3</a></li>
-                            </ul>
-                        </li> --}}
+                        <li><a href="{{ route('atl') }}">STEM LAB</a></li>
+                        <li><a href="{{ route('robotics-lab') }}">ROBOTICS LAB</a></li>
+                        <li><a href="{{ route('coding-lab') }}">CODING LAB</a></li>
+                        <li><a href="{{ route('maths-lab') }}">MATHS LAB</a></li>
+                        <li><a href="{{ route('language-lab') }}">LANGUAGE LAB</a></li>
+                        <li><a href="{{ route('science-lab') }}">SCIENCE LAB</a></li>
+                        <li><a href="{{ route('evs-lab') }}">EVS LAB</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{ route('welcome') }}"><span class="title">Courses</span></a>
+                    <ul>
                         @php
                             $bootcamps = App\Models\Category::all();
                         @endphp
@@ -62,12 +59,19 @@
                         @endif
                     </ul>
                 </li>
-                {{-- <li>
-                    <a href="#"><span class="title">Events</span></a>
-                </li>
                 <li>
-                    <a href="#"><span class="title">Blog</span></a>
-                </li> --}}
+                    <a href="{{ route('welcome') }}"><span class="title">Products</span></a>
+                    <ul>
+                        @php
+                            $bootcamps = App\Models\Category::all();
+                        @endphp
+                        @if (!empty($bootcamps))
+                            @foreach ($bootcamps as $bootcamp)
+                                <li><a href="#{{ $bootcamp->name }}">{{ $bootcamp->name }}</a></li>
+                            @endforeach
+                        @endif
+                    </ul>
+                </li>
                 <li class="last">
                     <a href="{{ route('contact.index') }}"><span class="title">Contact</span></a>
                 </li>
@@ -88,7 +92,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                                             document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

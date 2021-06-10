@@ -60,9 +60,13 @@
                         <div class="divider-one">
                             <p class="color-white">{{ $bootcamp->name }}</p>
                             <h1 class="color-white text-uppercase">{{ $bootcamp->description }}</h1>
-                            <a class="btn btn-transparent divider-btn" href="#course-{{ $bootcamp->name }}"> Check
-                                our
-                                courses </a>
+                            @if (count($bootcamp->courses))
+                                <a class="btn btn-transparent divider-btn" href="#course-{{ $bootcamp->name }}"> Check
+                                    our
+                                    courses </a>
+                            @else
+                                <p class="btn btn-transparent divider-btn">Course will be updated soon.</p>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -77,30 +81,12 @@
                         <div class="col-lg-6 offset-lg-3">
                             <div class="main-title text-center">
                                 <h3 class="mt0">Browse Our {{ $bootcamp->name }} Courses</h3>
-                                <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                                {{-- <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> --}}
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            {{-- <div id="options" class="alpha-pag full">
-                                <div class="option-isotop">
-                                    <ul id="filter" class="option-set" data-option-key="filter">
-                                        <li class="list-inline-item"><a href="#all" data-option-value="*"
-                                                class="selected">Developer</a></li>
-                                        <li class="list-inline-item"><a href="#business"
-                                                data-option-value=".business">Business</a>
-                                        </li>
-                                        <li class="list-inline-item"><a href="#design"
-                                                data-option-value=".design">Design</a>
-                                        </li>
-                                        <li class="list-inline-item"><a href="#web" data-option-value=".web">Web</a>
-                                        </li>
-                                        <li class="list-inline-item"><a href="#marketing"
-                                                data-option-value=".marketing">Marketing</a></li>
-                                    </ul>
-                                </div>
-                            </div><!-- FILTER BUTTONS --> --}}
                             <div class="emply-text-sec">
                                 <div class="row" id="masonry_abc">
                                     @foreach ($bootcamp->courses as $course)

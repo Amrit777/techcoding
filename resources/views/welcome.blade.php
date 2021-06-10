@@ -11,7 +11,7 @@
     @include('frontend.sections.blog')
     {{-- @include('frontend.sections.app-display-section') --}}
     {{-- @include('frontend.sections.parallax-divider') --}}
-    {{-- @include('frontend.sections.partners')
-    @include('frontend.sections.newsletter') --}}
+    @include('frontend.sections.partners')
+    {{-- @include('frontend.sections.newsletter') --}}
 
 @endsection

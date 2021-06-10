@@ -26,13 +26,16 @@
                     <div class="contact_localtion text-center">
                         <div class="icon"><span class="flaticon-placeholder-1"></span></div>
                         <h4>Our Location</h4>
-                        <p>Rishav plaza, 1-B, Rehabari, Guwahati, Assam, India</p>
+                        <p>1-B, First Floor, Rishav Plaza</p>
+                        <p>A.K Azad Road, Rehabari</p>
+                        <p>Guwahati, 781008</p>
+                        <p>Assam, India</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4">
                     <div class="contact_localtion text-center">
                         <div class="icon"><span class="flaticon-phone-call"></span></div>
-                        <h4>Our Location</h4>
+                        <h4>Our Contact</h4>
                         <p class="mb0">Mobile: (+91) 912 706 0701 </p>
                     </div>
                 </div>
@@ -40,7 +43,7 @@
                     <div class="contact_localtion text-center">
                         <div class="icon"><span class="flaticon-email"></span></div>
                         <h4>Write Some Words</h4>
-                        <p>admin@dotcrypt.co.in</p>
+                        <p>techcoding.dot@gmail.com</p>
                     </div>
                 </div>
             </div>

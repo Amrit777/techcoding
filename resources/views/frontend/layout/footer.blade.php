@@ -7,10 +7,10 @@
                     <h4>CONTACT</h4>
                     <p> 1-B, First Floor, Rishav Plaza</p>
                     <p> A.K Azad Road, Rehabari</p>
-                    <p> Gauhati, 781008</p>
+                    <p> Guwahati, 781008</p>
                     <p> Assam, India </p>
                     <p> Contact : +91 912-706-0701 </p>
-                    <p>techcoding.dot@gmail.com</p>
+                    <p> techcoding.dot@gmail.com</p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-md-3 col-lg-2">
@@ -135,7 +135,7 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
                 <div class="copyright-widget text-center">
-                    <p>@copyright. Dotcrypt Technologies Pvt Ltd © 2021. All Rights Reserved.</p>
+                    <p>Copyright @Dotcrypt Technologies Pvt Ltd © 2021. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
